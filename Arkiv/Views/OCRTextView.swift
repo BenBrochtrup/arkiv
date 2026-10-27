@@ -2,6 +2,12 @@ import SwiftUI
 
 struct OCRTextView: View {
     let state: OCRState
+    let blocks: [EditableOCRBlock]
+    let onTextChanged: @MainActor @Sendable (UUID, String) -> Void
+    let onStatusChanged: @MainActor @Sendable (UUID, OCRBlockReviewStatus) -> Void
+    let onRoleChanged: @MainActor @Sendable (UUID, OCRBlockRole) -> Void
+    let onSplit: @MainActor @Sendable (UUID) -> Void
+    let onCombine: @MainActor @Sendable (UUID, UUID) -> Void
 
     var body: some View {
         switch state {
@@ -33,6 +39,15 @@ struct OCRTextView: View {
                 .frame(height: 220)
                 .scrollIndicators(.visible)
                 .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 12))
+
+                OCRBlockEditorView(
+                    blocks: blocks,
+                    onTextChanged: onTextChanged,
+                    onStatusChanged: onStatusChanged,
+                    onRoleChanged: onRoleChanged,
+                    onSplit: onSplit,
+                    onCombine: onCombine
+                )
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         case .failed(let message):

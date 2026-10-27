@@ -17,7 +17,29 @@
 		A10000010000000000000008 /* ImagePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000013 /* ImagePreview.swift */; };
 		A10000010000000000000009 /* OCRTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000014 /* OCRTextView.swift */; };
 		A10000010000000000000010 /* ImportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000015 /* ImportViewModel.swift */; };
+		A10000010000000000000011 /* OCRSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000016 /* OCRSelection.swift */; };
+		A10000010000000000000012 /* OCRLineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000017 /* OCRLineRow.swift */; };
+		A10000010000000000000013 /* OCRRegionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000018 /* OCRRegionSelectionView.swift */; };
+		A10000010000000000000014 /* ImageCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000019 /* ImageCropper.swift */; };
+		A10000010000000000000015 /* BookCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000020 /* BookCandidate.swift */; };
+		A10000010000000000000016 /* TextPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000021 /* TextPreprocessor.swift */; };
+		A10000010000000000000017 /* BookCandidateExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000022 /* BookCandidateExtractor.swift */; };
+		A10000010000000000000018 /* AddBookCandidateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000023 /* AddBookCandidateView.swift */; };
+		A10000010000000000000019 /* CandidateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000024 /* CandidateListView.swift */; };
+		A10000010000000000000020 /* BookCandidateExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000025 /* BookCandidateExtractorTests.swift */; };
+		A10000010000000000000021 /* EditableOCRBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000026 /* EditableOCRBlock.swift */; };
+		A10000010000000000000022 /* OCRBlockEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000027 /* OCRBlockEditorView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A90000010000000000000001 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A70000010000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A50000010000000000000001;
+			remoteInfo = Arkiv;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A20000010000000000000001 /* ArkivApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArkivApp.swift; sourceTree = "<group>"; };
@@ -34,6 +56,18 @@
 		A20000010000000000000013 /* ImagePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreview.swift; sourceTree = "<group>"; };
 		A20000010000000000000014 /* OCRTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRTextView.swift; sourceTree = "<group>"; };
 		A20000010000000000000015 /* ImportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportViewModel.swift; sourceTree = "<group>"; };
+		A20000010000000000000016 /* OCRSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRSelection.swift; sourceTree = "<group>"; };
+		A20000010000000000000017 /* OCRLineRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRLineRow.swift; sourceTree = "<group>"; };
+		A20000010000000000000018 /* OCRRegionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRRegionSelectionView.swift; sourceTree = "<group>"; };
+		A20000010000000000000019 /* ImageCropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropper.swift; sourceTree = "<group>"; };
+		A20000010000000000000020 /* BookCandidate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCandidate.swift; sourceTree = "<group>"; };
+		A20000010000000000000021 /* TextPreprocessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPreprocessor.swift; sourceTree = "<group>"; };
+		A20000010000000000000022 /* BookCandidateExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCandidateExtractor.swift; sourceTree = "<group>"; };
+		A20000010000000000000023 /* AddBookCandidateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookCandidateView.swift; sourceTree = "<group>"; };
+		A20000010000000000000024 /* CandidateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateListView.swift; sourceTree = "<group>"; };
+		A20000010000000000000025 /* BookCandidateExtractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCandidateExtractorTests.swift; sourceTree = "<group>"; };
+		A20000010000000000000026 /* EditableOCRBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableOCRBlock.swift; sourceTree = "<group>"; };
+		A20000010000000000000027 /* OCRBlockEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRBlockEditorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +130,11 @@
 				A20000010000000000000002 /* ImportView.swift */,
 				A20000010000000000000013 /* ImagePreview.swift */,
 				A20000010000000000000014 /* OCRTextView.swift */,
+				A20000010000000000000017 /* OCRLineRow.swift */,
+				A20000010000000000000018 /* OCRRegionSelectionView.swift */,
+				A20000010000000000000023 /* AddBookCandidateView.swift */,
+				A20000010000000000000024 /* CandidateListView.swift */,
+				A20000010000000000000027 /* OCRBlockEditorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				A20000010000000000000010 /* OCRModels.swift */,
+				A20000010000000000000016 /* OCRSelection.swift */,
+				A20000010000000000000020 /* BookCandidate.swift */,
+				A20000010000000000000026 /* EditableOCRBlock.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,6 +155,7 @@
 			children = (
 				A20000010000000000000011 /* ImageTextRecognizing.swift */,
 				A20000010000000000000012 /* VisionTextRecognizer.swift */,
+				A20000010000000000000019 /* ImageCropper.swift */,
 			);
 			path = OCR;
 			sourceTree = "<group>";
@@ -121,8 +164,18 @@
 			isa = PBXGroup;
 			children = (
 				A40000010000000000000009 /* OCR */,
+				A40000010000000000000012 /* Extraction */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A40000010000000000000012 /* Extraction */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000021 /* TextPreprocessor.swift */,
+				A20000010000000000000022 /* BookCandidateExtractor.swift */,
+			);
+			path = Extraction;
 			sourceTree = "<group>";
 		};
 		A40000010000000000000011 /* ViewModels */ = {
@@ -149,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				A20000010000000000000003 /* ArkivTests.swift */,
+				A20000010000000000000025 /* BookCandidateExtractorTests.swift */,
 			);
 			path = ArkivTests;
 			sourceTree = "<group>";
@@ -184,6 +238,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A90000010000000000000002 /* PBXTargetDependency */,
 			);
 			name = ArkivTests;
 			productName = ArkivTests;
@@ -232,6 +287,14 @@
 		A30000010000000000000006 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A90000010000000000000002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A50000010000000000000001 /* Arkiv */;
+			targetProxy = A90000010000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A30000010000000000000003 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -245,6 +308,17 @@
 				A10000010000000000000008 /* ImagePreview.swift in Sources */,
 				A10000010000000000000009 /* OCRTextView.swift in Sources */,
 				A10000010000000000000010 /* ImportViewModel.swift in Sources */,
+				A10000010000000000000011 /* OCRSelection.swift in Sources */,
+				A10000010000000000000012 /* OCRLineRow.swift in Sources */,
+				A10000010000000000000013 /* OCRRegionSelectionView.swift in Sources */,
+				A10000010000000000000014 /* ImageCropper.swift in Sources */,
+				A10000010000000000000015 /* BookCandidate.swift in Sources */,
+				A10000010000000000000016 /* TextPreprocessor.swift in Sources */,
+				A10000010000000000000017 /* BookCandidateExtractor.swift in Sources */,
+				A10000010000000000000018 /* AddBookCandidateView.swift in Sources */,
+				A10000010000000000000019 /* CandidateListView.swift in Sources */,
+				A10000010000000000000021 /* EditableOCRBlock.swift in Sources */,
+				A10000010000000000000022 /* OCRBlockEditorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10000010000000000000003 /* ArkivTests.swift in Sources */,
+				A10000010000000000000020 /* BookCandidateExtractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +355,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				ENABLE_TESTABILITY = YES;
 			};
 			name = Debug;
 		};
@@ -321,6 +397,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arkiv.app/Arkiv";
 			};
 			name = Debug;
 		};
@@ -338,6 +415,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arkiv.app/Arkiv";
 			};
 			name = Release;
 		};

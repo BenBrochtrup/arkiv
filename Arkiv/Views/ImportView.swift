@@ -44,7 +44,27 @@ struct ImportView: View {
                     }
 
                     if let selectedImage = viewModel.selectedImage {
-                        ImagePreview(image: selectedImage)
+                        OCRRegionSelectionView(
+                            image: selectedImage,
+                            selectedRegion: viewModel.ocrSelection.region,
+                            onRegionChanged: viewModel.updateSelectedRegion
+                        )
+
+                        if viewModel.ocrSelection.region != nil {
+                            Button {
+                                Task {
+                                    await viewModel.recognizeSelectedRegion()
+                                }
+                            } label: {
+                                Label("Recognize Selected Region", systemImage: "text.viewfinder")
+                            }
+                            .buttonStyle(.bordered)
+                            .disabled(viewModel.isProcessingRegion || viewModel.isLoadingImage)
+
+                            if viewModel.isProcessingRegion {
+                                ProgressView("Recognizing selected region…")
+                            }
+                        }
                     } else if !viewModel.isLoadingImage {
                         ContentUnavailableView(
                             "No Screenshot Selected",
@@ -53,7 +73,32 @@ struct ImportView: View {
                         )
                     }
 
-                    OCRTextView(state: viewModel.ocrState)
+                    if viewModel.isShowingFocusedOCR {
+                        Button("Show Full Image OCR", action: viewModel.showFullImageOCR)
+                            .font(.subheadline.weight(.medium))
+                    }
+
+                    OCRTextView(
+                        state: viewModel.ocrState,
+                        blocks: viewModel.editableOCRBlocks,
+                        onTextChanged: viewModel.updateOCRBlockText,
+                        onStatusChanged: viewModel.updateOCRBlockStatus,
+                        onRoleChanged: viewModel.updateOCRBlockRole,
+                        onSplit: viewModel.splitOCRBlock,
+                        onCombine: viewModel.combineOCRBlocks
+                    )
+
+                    if case .completed = viewModel.ocrState {
+                        Button("Create Candidate From Labels", action: viewModel.createLabeledCandidate)
+                            .buttonStyle(.bordered)
+                    }
+
+                    if viewModel.selectedImage != nil {
+                        CandidateListView(
+                            candidates: viewModel.candidates,
+                            onAdd: viewModel.addManualCandidate
+                        )
+                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
